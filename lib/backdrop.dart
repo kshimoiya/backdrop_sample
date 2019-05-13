@@ -103,9 +103,16 @@ class _BackdropState extends State<Backdrop> with SingleTickerProviderStateMixin
           listenable: _controller.view,
         ),
         actions: <Widget>[
-          IconButton(
-            onPressed: _toggleBackdropLayerVisibility,
-            icon: Icon(Icons.tune),
+          _BackdropTitle(
+            frontTitle: IconButton(
+              onPressed: _toggleBackdropLayerVisibility,
+              icon: Icon(Icons.tune),
+            ),
+            backTitle: IconButton(
+              onPressed: _toggleBackdropLayerVisibility,
+              icon: Icon(Icons.close),
+            ),
+            listenable: _controller.view,
           ),
         ],
       ),
