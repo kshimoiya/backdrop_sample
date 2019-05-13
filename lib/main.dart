@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'backdrop.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -20,7 +22,17 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+//      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Backdrop(
+        frontLayer: Container(
+          color: Colors.amber,
+        ),
+        backLayer: Container(
+          color: Colors.green,
+        ),
+        frontTitle: Text('front'),
+        backTitle: Text('back'),
+      ),
     );
   }
 }
